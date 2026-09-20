@@ -11,14 +11,16 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
-// TODO 1: lengkapi data produk
 const produk = [
-  // { nama: "Laptop", harga: 8500000 },
+  { nama: "Ram 16GB DDR5", harga: 1999999 },
+  { nama: "SSD NVME 1TB", harga: 2250000 },
+  { nama: "HDD 1TB", harga: 3759000 },
 ];
 
 function renderHalamanProduk(daftarProduk) {
-  // TODO 2: bangun string HTML dari daftarProduk
-  const itemHtml = ""; // ganti dengan map() daftarProduk menjadi <li>...</li>
+  const itemHtml = daftarProduk
+    .map((item) => `<li>${item.nama} - Rp${item.harga.toLocaleString("id-ID")}</li>`)
+    .join("");
 
   return `
     <html>
