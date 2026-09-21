@@ -4,9 +4,10 @@
   "description": "Starter RESTful API CRUD dengan Express.js - Pertemuan 3-4 PAW II",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.22.3",
+    "nodemon": "^3.1.14"
   }
 }

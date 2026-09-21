@@ -11,26 +11,32 @@ const PORT = 3000;
 app.use(express.json());
 
 let mahasiswa = [
-  { id: 1, nama: "Andi", jurusan: "Sistem Informasi" },
-  { id: 2, nama: "Budi", jurusan: "Informatika" },
+  { id: 1, nama: "Ahuwa", jurusan: "Sistem Informasi", status : "Aktif" },
+  { id: 2, nama: "herry", jurusan: "Informatika", status : "Cuti" },
+  { id: 3, nama: "Akiong", jurusan: "Manajemen", status : "Cuti"},
+  { id: 4, nama: "Taufiq", jurusan: "Elektro", status : "Aktif"},
 ];
 
 // TODO 1: GET /mahasiswa -> kirim seluruh data sebagai JSON
 app.get("/mahasiswa", (req, res) => {
-  // lengkapi di sini
+  res.json(mahasiswa);
+  if (!data) return res.status(404).json({message:'data tidak ditemukan'});
+  req.json(data);
 });
 
 // TODO 2: GET /mahasiswa/:id -> cari data berdasarkan id,
 // kirim 404 dengan { message: 'Data tidak ditemukan' } jika tidak ada
 app.get("/mahasiswa/:id", (req, res) => {
-  // lengkapi di sini
+  req.json({message:'Data tidak ditemukan'});
 });
 
 // TODO 3: POST /mahasiswa -> ambil { nama, jurusan } dari req.body,
 // buat objek baru dengan id = mahasiswa.length + 1, simpan ke array,
 // kirim response dengan status 201
 app.post("/mahasiswa", (req, res) => {
-  // lengkapi di sini
+  req.body(
+    
+  );
 });
 
 // TODO 4: PUT /mahasiswa/:id -> cari index berdasarkan id,
