@@ -7,8 +7,25 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.19.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5"
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3"
   }
 }
+
+{
+  "name": "Kuis PAW II limited",
+  "version": "1.0.0",
+  "description": "Kuis PAW II",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.22.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
+
