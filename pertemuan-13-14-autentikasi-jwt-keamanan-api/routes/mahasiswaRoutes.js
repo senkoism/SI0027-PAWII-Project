@@ -9,8 +9,8 @@ const verifyToken = require("../middlewares/verifyToken");
 router.get("/", mahasiswaController.getAll);
 router.get("/:id", mahasiswaController.getById);
 
-// TODO: router.post('/', verifyToken, mahasiswaController.create);
-// TODO: router.put('/:id', verifyToken, mahasiswaController.update);
-// TODO: router.delete('/:id', verifyToken, mahasiswaController.remove);
+router.post('/', verifyToken, mahasiswaController.create);
+router.put('/:id', verifyToken, mahasiswaController.update);
+router.delete('/:id', verifyToken, mahasiswaController.remove);
 
 module.exports = router;
